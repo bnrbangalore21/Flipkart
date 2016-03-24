@@ -1,0 +1,17 @@
+<project name="catalog" default="package" basedir=".">
+
+    <target name="init">
+        <buildnumber file="version"/>
+        <mkdir dir="classes"/>
+        <mkdir dir="lib"/>
+    </target>
+    
+    <target name="compilation" depends="init">
+        <javac srcdir="src" destdir="classes"/>
+    </target>
+    
+    <target name="package" depends="compilation">
+        <jar basedir="classes" destfile="lib/catalog_${build.number}.jar"/>
+    </target>
+
+</project>

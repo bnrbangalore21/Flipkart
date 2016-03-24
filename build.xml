@@ -1,0 +1,17 @@
+<project name="catalog" default="all">
+
+
+    <target name="all">
+       
+	<ant antfile="Catalog/build.xml" inheritAll="false"/>
+ 
+        <ant antfile="www/build.xml" inheritAll="false"/>
+
+         <ant antfile="Finance/build.xml" inheritAll="false"/>
+
+       <ant antfile="OMS/build.xml" inheritAll="false"/>
+
+   </target>
+
+
+</project>
